@@ -28,11 +28,11 @@ function Cart() {
         <div>
             <h1 className="text-xl font-bold"> Total: ${total}</h1>
             <div>
-                {amounts.map(({ item, amount }) => {
+                {amounts.map(({ item, amount }) => (
                     <div key={item.id}>
                         x{amount} {item.name} (${amount * item.price})
                     </div>
-                })}
+                ))}
             </div>
         </div>
         
