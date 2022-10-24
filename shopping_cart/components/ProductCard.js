@@ -1,9 +1,9 @@
 import react, { useContext } from "react";
 
-import ShoppingCartConext from "./context/cartContext";
+import ShoppingCartContext from "./context/cartContext";
 
 const ProductCard = ({ id, name, price, picture }) => {
-    const { items, setItems } = useContext(ShoppingCartConext);
+    const { items, setItems } = useContext(ShoppingCartContext);
     const productAmount = id in items ? items[id] : 0;
 
     const handleAmount = (action) => {
@@ -22,7 +22,7 @@ const ProductCard = ({ id, name, price, picture }) => {
     return (
         <div className="bg-gray-200 p-6 rounded-md">
             <div className="relative 100% h-40 m-auto">
-                <Image src={picture} alt={name} className="object-cover" />
+                <img src={picture} alt={name} className="object-cover" />
             </div>
             <div className="flex justify-between mt-4">
                 <div className="font-bold text-1">{name}</div>

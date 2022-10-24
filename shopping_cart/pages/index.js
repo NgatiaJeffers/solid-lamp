@@ -7,12 +7,12 @@ import products from "../data/items";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    // <div className={styles.container}>
       <div className='grid grid-cols-4 gap-4'>
-        {products.map((product) => {
+        {products.map((product) => (
           <ProductCard key={product.id} {...product} />
-        })}
+        ))}
       </div>
-    </div>
+    // </div>
   )
 }

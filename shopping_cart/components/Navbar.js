@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import Link from "next/link";
 
-import ShoppingCartConext from "./context/cartContext";
+import ShoppingCartContext from "./context/cartContext";
 
 function Navbar() {
-    const { items } = useContext(ShoppingCartConext);
+    const { items } = useContext(ShoppingCartContext);
     const totalItemsAmount = Object.values(items).reduce((x, y) => x + y, 0);
 
     return (

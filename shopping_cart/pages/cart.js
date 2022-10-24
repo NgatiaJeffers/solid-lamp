@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import ShoppingCartConext from "../components/context/cartContext";
+import ShoppingCartContext from "../components/context/cartContext";
 import data from "../data/items";
 
 // Getting the whole product from out store
@@ -10,7 +10,7 @@ function getFullItem(id) {
 }
 
 function Cart() {
-    const { items } = useContext(ShoppingCartConext);
+    const { items } = useContext(ShoppingCartContext);
 
     // Get total amount of products in the cart
     const total = Object.keys(items)
