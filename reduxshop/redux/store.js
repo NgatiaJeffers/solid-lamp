@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { applyMiddleware, configureStore } from "@reduxjs/toolkit";
-import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 // variable for keeping the redux store
 let store;
@@ -26,12 +26,11 @@ const reducer = (state = initialState, action) => {
     }
 }
 
-// Fully initializing our store
+// Fully initializing our store a helper function
 function initStore(preloadedState = initialState) {
-    return configureStore(
-        reducer,
+    return configureStore({reducer: reducer},
         preloadedState,
-        composeWithDevTools(applyMiddleware())
+        // composeWithDevTools(applyMiddleware())
     )
 }
 
