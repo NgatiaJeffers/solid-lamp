@@ -1,0 +1,55 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.button :global {
+  padding: 5px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-default {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+  color: black;
+}
+
+.button-success {
+  composes: button-default;
+  background-color: green;
+  color: white;
+}
+
+.button-danger {
+  composes: button-default;
+  background-color: red;
+  color: white;
+ }
+
